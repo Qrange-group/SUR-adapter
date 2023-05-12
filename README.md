@@ -24,7 +24,7 @@ We only provide **ONE** data sample for running through this `repo` with the fol
 (1) Clone the code. 
 
 ```sh
-git clone https://github.com/zhongshsh/SUR-adapter
+git clone https://github.com/Qrange-group/SUR-adapter
 ```
 ```sh
 cd SUR-adapter
