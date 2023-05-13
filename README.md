@@ -145,9 +145,10 @@ image.show()
 ## 🌸 Citation
 
 ```
-@inproceedings{Zhong2023SURadapterET,
+@article{zhong2023adapter,
   title={SUR-adapter: Enhancing Text-to-Image Pre-trained Diffusion Models with Large Language Models},
-  author={Shanshan Zhong and Zhongzhan Huang and Wushao Wen and Jinghui Qin and Liang Lin},
+  author={Zhong, Shanshan and Huang, Zhongzhan and Wen, Wushao and Qin, Jinghui and Lin, Liang},
+  journal={arXiv preprint arXiv:2305.05189},
   year={2023}
 }
 ```
