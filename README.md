@@ -1,5 +1,4 @@
 # SUR-adapter 
-[![996.ICU](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) 
 ![GitHub](https://img.shields.io/github/license/gbup-group/DIANet.svg)
 ![GitHub](https://img.shields.io/badge/Qrange%20-group-orange)
 
