@@ -1,0 +1,3 @@
+fake_useragent
+git+https://github.com/salesforce/LAVIS.git
+transformers==4.25.0

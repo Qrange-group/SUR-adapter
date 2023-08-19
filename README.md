@@ -15,6 +15,10 @@ This repository is the implementation of "SUR-adapter: Enhancing Text-to-Image P
   <img src="https://github.com/Qrange-group/RAS/assets/62104945/af863827-2ea4-45cb-b3ed-2f98ba0e7d03">
 </p>
 
+## 📣 News
+
+
+2023/08/19 - We have provided the data scraping code for Civitai. Please take a look at [processing](https://github.com/Qrange-group/SUR-adapter/blob/main/spider/processing.ipynb).
 
 ## 🌻 Quick Training
 
@@ -90,7 +94,7 @@ CUDA_VISIBLE_DEVICES=$CUDA accelerate launch SUR_adapter_train.py \
 
 ## 🌻 Dataset Declaration
 
-You can prepare the dataset in the format of `sur_data_small`. For examples, you can get data from [Civitai](https://civitai.com) through [api](https://github.com/civitai/civitai/wiki/REST-API-Reference). If you have some problems, you can try to find answers from [guide](https://huggingface.co/docs/datasets/create_dataset). 
+You can prepare the dataset in the format of `sur_data_small`. For examples, you can get data from [Civitai](https://civitai.com) through [api](https://github.com/civitai/civitai/wiki/REST-API-Reference). We have provided the data scraping code for Civitai. Please take a look at [processing](https://github.com/Qrange-group/SUR-adapter/blob/main/spider/processing.ipynb). If you have some problems, you can try to find answers from [datasets document](https://huggingface.co/docs/datasets/create_dataset) for more details. 
 
 ❣ **Warning** ❣: The dataset SURD proposed in our work is collected from [Lexica](https://lexica.art) ([license](https://lexica.art/license)), [Civitai](https://civitai.com) ([license](https://github.com/civitai/civitai/blob/main/LICENSE)), and [Stable Diffusion Online](https://stablediffusionweb.com) ([license](https://huggingface.co/spaces/CompVis/stable-diffusion-license)). The licenses point out that if the dataset is used for commercial purposes, there may be certain legal risks. In order to avoid potential copyright disputes and unnecessary trouble, we have decided not to publicly release SURD and our ckpt. If you have a need for the data, please collect and clean it yourself. If it is to be used for commercial purposes, please contact the relevant website or author for authorization.
 
