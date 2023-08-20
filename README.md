@@ -20,6 +20,12 @@ This repository is the implementation of "SUR-adapter: Enhancing Text-to-Image P
 
 2023/08/19 - We have provided the data scraping code for Civitai. Please take a look at [processing](https://github.com/Qrange-group/SUR-adapter/blob/main/spider/processing.ipynb).
 
+## 🏇 TODO
+
+- [x] spyder script 
+- [ ] dataset
+- [ ] pretrain model
+
 ## 🌻 Quick Training
 
 We only provide **ONE** data sample for running through this `repo` with the following code. See dataset declaration for details.
