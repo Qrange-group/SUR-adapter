@@ -18,13 +18,15 @@ This repository is the implementation of "SUR-adapter: Enhancing Text-to-Image P
 ## 📣 News
 
 
+2023/10/20 - We have provided an example checkpoint of SUR-adapter [[Google Drive](https://drive.google.com/drive/folders/1UyC9_AqTezmHXmj4dh0A-9RBKKx_JmJZ?usp=share_link)]. Please try it! 
+
 2023/08/19 - We have provided the data scraping code for Civitai. Please take a look at [processing](https://github.com/Qrange-group/SUR-adapter/blob/main/data_collect/processing.ipynb).
 
 ## 🏇 TODO
 
 - [x] data collection script
+- [x] pretrain model
 - [ ] dataset
-- [ ] pretrain model
 
 ## 🌻 Quick Training
 
