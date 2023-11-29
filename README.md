@@ -4,7 +4,7 @@
 
 By [Shanshan Zhong](https://github.com/zhongshsh) and [Zhongzhan Huang](https://dedekinds.github.io) and [Wushao Wen](https://scholar.google.com/citations?user=FSnLWy4AAAAJ) and [Jinghui Qin](https://github.com/QinJinghui) and [Liang Lin](http://www.linliang.net)
 
-This repository is the implementation of "SUR-adapter: Enhancing Text-to-Image Pre-trained Diffusion Models with Large Language Models" [[paper]](https://arxiv.org/abs/2305.05189). 
+This repository is the implementation of "SUR-adapter: Enhancing Text-to-Image Pre-trained Diffusion Models with Large Language Models" [[paper]](https://arxiv.org/abs/2305.05189). Our paper has been accepted at the 31st ACM International Conference on Multimedia (ACM MM 2023, Oral).
 
 
 ## 🌻 Introduction
@@ -156,10 +156,11 @@ image.show()
 ## 🌸 Citation
 
 ```
-@article{zhong2023adapter,
-  title={SUR-adapter: Enhancing Text-to-Image Pre-trained Diffusion Models with Large Language Models},
-  author={Zhong, Shanshan and Huang, Zhongzhan and Wen, Wushao and Qin, Jinghui and Lin, Liang},
-  journal={arXiv preprint arXiv:2305.05189},
+@inproceedings{zhong2023adapter,
+  title={Sur-adapter: Enhancing text-to-image pre-trained diffusion models with large language models},
+  author={Zhong, Shanshan and Huang, Zhongzhan and Wen, Weushao and Qin, Jinghui and Lin, Liang},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  pages={567--578},
   year={2023}
 }
 ```

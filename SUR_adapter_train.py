@@ -966,11 +966,11 @@ def main():
                 )
                 llm_resize_vec = llm_resize(llm_encoder)
 
-                encoder_hidden_states, out_transformer_encoder, out_llm = adapter(
+                encoder_hidden_states, out_transformer_encoder, _ = adapter(
                     encoder_hidden_states_org
                 )
                 llm_loss = distillation_loss(llm_resize_vec, out_transformer_encoder)
-                prompt_loss = distillation_loss(prompt_encoder_hidden_states, out_llm)
+                prompt_loss = distillation_loss(prompt_encoder_hidden_states, encoder_hidden_states)
 
                 # Get the target for loss depending on the prediction type
                 if noise_scheduler.config.prediction_type == "epsilon":
@@ -981,14 +981,6 @@ def main():
                     raise ValueError(
                         f"Unknown prediction type {noise_scheduler.config.prediction_type}"
                     )
-
-                del (
-                    batch,
-                    llm_resize_vec,
-                    out_transformer_encoder,
-                    prompt_encoder_hidden_states,
-                    out_llm,
-                )
 
                 # Predict the noise residual and compute loss
                 encoder_hidden_states = torch.tensor(
@@ -1025,7 +1017,6 @@ def main():
                     loss = loss.mean()
 
                 loss += args.llm_weight * llm_loss + args.prompt_weight * prompt_loss
-                # loss += 1e-3 * prompt_loss
                 csv_logger.append(
                     [
                         global_step,
