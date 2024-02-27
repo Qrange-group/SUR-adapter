@@ -18,6 +18,8 @@ This repository is the implementation of "SUR-adapter: Enhancing Text-to-Image P
 ## 📣 News
 
 
+2024/02/27 - We have provided a filtered (non-NSFW) version of dataset SURD [[Google Drive](https://drive.google.com/file/d/1HOikHEXY4_75cafEK3HmqRhPAaSYEeHh/view?usp=drive_link)]. Please try it! 
+
 2023/10/20 - We have provided an example checkpoint of SUR-adapter [[Google Drive](https://drive.google.com/drive/folders/1UyC9_AqTezmHXmj4dh0A-9RBKKx_JmJZ?usp=share_link)]. Please try it! 
 
 2023/08/19 - We have provided the data scraping code for Civitai. Please take a look at [processing](https://github.com/Qrange-group/SUR-adapter/blob/main/data_collect/processing.ipynb).
@@ -26,11 +28,9 @@ This repository is the implementation of "SUR-adapter: Enhancing Text-to-Image P
 
 - [x] data collection script
 - [x] pretrain model
-- [ ] dataset
+- [x] dataset
 
 ## 🌻 Quick Training
-
-We only provide **ONE** data sample for running through this `repo` with the following code. See dataset declaration for details.
 
 (1) Clone the code. 
 
@@ -58,7 +58,17 @@ Finally, install the relevant packages.
 pip install -r requirements.txt
 ```
 
-(3) Run the following code in shell, where `0` is the gpu id. If you encounter CUDA out of memory, you can try to find a solution in [document](https://huggingface.co/docs/diffusers/v0.16.0/en/optimization/fp16). 
+(3) Download the dataset and vectors.
+
+```sh
+gdown --fuzzy https://drive.google.com/file/d/1HOikHEXY4_75cafEK3HmqRhPAaSYEeHh/view?usp=sharing
+unzip SURD.zip
+mkdir -p prompt2vec/13B
+gdown --fuzzy https://drive.google.com/file/d/1u6K3uvTr7G58I_i98PkPitzp1jDiXLLX/view?usp=sharing -O prompt2vec/13B
+```
+
+
+(4) Run the following code in shell, where `0` is the gpu id. If you encounter CUDA out of memory, you can try to find a solution in [document](https://huggingface.co/docs/diffusers/v0.16.0/en/optimization/fp16). 
 
 ```sh
 sh run.sh 0
@@ -73,7 +83,7 @@ export LLM_LAYER=39          # layer of LLM
 export MODEL_NAME="runwayml/stable-diffusion-v1-5"  # pre-trained diffusion model
 export INFO="test"           # help to idetify the checkpoints
 export OUTPUT_DIR="fp16"     # help to idetify the checkpoints
-export TRAIN_DIR="sur_data_small"   # dataset
+export TRAIN_DIR="SURD"   # dataset
 export SAVE_STEP=100         # step saved at intervals
 export BATCH_SIZE=1          # batch size
 
@@ -102,9 +112,15 @@ CUDA_VISIBLE_DEVICES=$CUDA accelerate launch SUR_adapter_train.py \
 
 ## 🌻 Dataset Declaration
 
-You can prepare the dataset in the format of `sur_data_small`. For examples, you can get data from [Civitai](https://civitai.com) through [api](https://github.com/civitai/civitai/wiki/REST-API-Reference). We have provided the data scraping code for Civitai. Please take a look at [processing](https://github.com/Qrange-group/SUR-adapter/blob/main/data_collect/processing.ipynb). If you have some problems, you can try to find answers from [datasets document](https://huggingface.co/docs/datasets/create_dataset) for more details. 
+### Non-NFSW Version 
 
-❣ **Warning** ❣: The dataset SURD proposed in our work is collected from [Lexica](https://lexica.art) ([license](https://lexica.art/license)), [Civitai](https://civitai.com) ([license](https://github.com/civitai/civitai/blob/main/LICENSE)), and [Stable Diffusion Online](https://stablediffusionweb.com) ([license](https://huggingface.co/spaces/CompVis/stable-diffusion-license)). The licenses point out that if the dataset is used for commercial purposes, there may be certain legal risks. In order to avoid potential copyright disputes and unnecessary trouble, we have decided not to publicly release SURD and our ckpt. If you have a need for the data, please collect and clean it yourself. If it is to be used for commercial purposes, please contact the relevant website or author for authorization.
+As our original dataset SURD contains some sexually explicit images and others unsuitable for dissemination, we utilize [nsfw toolkit](https://github.com/rockyzhengwu/nsfw) to filter SURD. [nsfw](https://github.com/rockyzhengwu/nsfw) categorizes images into five groups: `porn`, `hentai`, `sexy`, `neutral`, and `drawings` (for more details, refer to [description](https://github.com/alex000kim/nsfw_data_scraper?tab=readme-ov-file#description)). We exclusively retain images labeled as `neutral` and `drawings`, ensuring they are safe for the workplace, thus forming the work-appropriate version of SURD (26121 samples).
+
+### Updating Dataset
+
+You can try to collect more up-to-date data from the internet. We have provided the data scraping code for [Civitai](https://civitai.com). Please take a look at [processing](https://github.com/Qrange-group/SUR-adapter/blob/main/data_collect/processing.ipynb). Afterward, prepare the dataset in the format of `SURD`. If you have some problems, you can try to find answers from [datasets document](https://huggingface.co/docs/datasets/create_dataset) for more details. 
+
+❣ **Warning** ❣: The dataset SURD proposed in our work is collected from [Lexica](https://lexica.art) ([license](https://lexica.art/license)), [Civitai](https://civitai.com) ([license](https://github.com/civitai/civitai/blob/main/LICENSE)), and [Stable Diffusion Online](https://stablediffusionweb.com) ([license](https://huggingface.co/spaces/CompVis/stable-diffusion-license)). The licenses point out that if the dataset is used for commercial purposes, there may be certain legal risks. If it is to be used for commercial purposes, please contact the relevant website or author for authorization.
 
  
 

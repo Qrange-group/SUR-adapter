@@ -5,10 +5,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+prompt2vec
 # C extensions
 *.so
-
+SURD
 # Distribution / packaging
 .Python
 build/
