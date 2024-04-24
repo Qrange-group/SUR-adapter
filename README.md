@@ -2,7 +2,7 @@
 ![GitHub](https://img.shields.io/github/license/gbup-group/DIANet.svg)
 ![GitHub](https://img.shields.io/badge/Qrange%20-group-orange)
 
-By [Shanshan Zhong](https://github.com/zhongshsh) and [Zhongzhan Huang](https://dedekinds.github.io) and [Wushao Wen](https://scholar.google.com/citations?user=FSnLWy4AAAAJ) and [Jinghui Qin](https://github.com/QinJinghui) and [Liang Lin](http://www.linliang.net)
+By [Shanshan Zhong](https://github.com/zhongshsh) and [Zhongzhan Huang](https://dedekinds.github.io) and [Wushao Wen](https://scholar.google.com/citations?user=FSnLWy4AAAAJ) and [Jinghui Qin](https://github.com/QinJinghui) and [Liang Lin](https://scholar.google.com/citations?user=Nav8m8gAAAAJ&hl=en)
 
 This repository is the implementation of "SUR-adapter: Enhancing Text-to-Image Pre-trained Diffusion Models with Large Language Models" [[paper]](https://arxiv.org/abs/2305.05189). Our paper has been accepted at the 31st ACM International Conference on Multimedia (ACM MM 2023, Oral).
 
