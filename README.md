@@ -61,12 +61,12 @@ pip install -r requirements.txt
 (3) Download the dataset and vectors.
 
 ```sh
-gdown --fuzzy https://drive.google.com/file/d/1HOikHEXY4_75cafEK3HmqRhPAaSYEeHh/view?usp=sharing
+wget --header "Authorization: Bearer your_hf_token" https://huggingface.co/datasets/zhongshsh/SURD/resolve/main/SURD.zip
 unzip SURD.zip
 mkdir -p prompt2vec/13B
 gdown --fuzzy https://drive.google.com/file/d/1u6K3uvTr7G58I_i98PkPitzp1jDiXLLX/view?usp=sharing -O prompt2vec/13B
 ```
-
+💡 Replace your_hf_token with your HuggingFace token from https://huggingface.co/settings/tokens.
 
 (4) Run the following code in shell, where `0` is the gpu id. If you encounter CUDA out of memory, you can try to find a solution in [document](https://huggingface.co/docs/diffusers/v0.16.0/en/optimization/fp16). 
 
