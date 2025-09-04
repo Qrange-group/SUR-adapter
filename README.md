@@ -18,9 +18,9 @@ This repository is the implementation of "SUR-adapter: Enhancing Text-to-Image P
 ## 📣 News
 
 
-2024/02/27 - We have provided a filtered (non-NSFW) version of dataset SURD [[Google Drive](https://drive.google.com/file/d/1HOikHEXY4_75cafEK3HmqRhPAaSYEeHh/view?usp=drive_link)]. Please try it! 
+2024/02/27 - We have provided a filtered (non-NSFW) version of dataset [SURD](https://huggingface.co/datasets/zhongshsh/SURD). Please try it! 
 
-2023/10/20 - We have provided an example checkpoint of SUR-adapter [[Google Drive](https://drive.google.com/drive/folders/1UyC9_AqTezmHXmj4dh0A-9RBKKx_JmJZ?usp=share_link)]. Please try it! 
+2023/10/20 - We have provided an example checkpoint of [SUR-adapter](https://huggingface.co/zhongshsh/SUR-adapter). Please try it! 
 
 2023/08/19 - We have provided the data scraping code for Civitai. Please take a look at [processing](https://github.com/Qrange-group/SUR-adapter/blob/main/data_collect/processing.ipynb).
 
